@@ -1,0 +1,166 @@
+Started by an SCM change
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/SampleCodeDeployApp
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+The recommended git tool is: NONE
+using credential afcac9f2-72e2-43ec-a381-c52864c24a96
+Cloning the remote Git repository
+Cloning repository https://github.com/kxw9298/aws-cicd-sample-application.git
+ > git init /var/lib/jenkins/workspace/SampleCodeDeployApp # timeout=10
+Fetching upstream changes from https://github.com/kxw9298/aws-cicd-sample-application.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.23.3'
+using GIT_ASKPASS to set credentials github credentials
+ > git fetch --tags --force --progress -- https://github.com/kxw9298/aws-cicd-sample-application.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/kxw9298/aws-cicd-sample-application.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision a036232ff4574a24e3f771034c598762d0626938 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a036232ff4574a24e3f771034c598762d0626938 # timeout=10
+Commit message: "readme"
+ > git rev-list --no-walk 121cdca17f7aeebb2d253178ec1dd5aac56d4561 # timeout=10
+[AWS CodeBuild Plugin] Using given AWS access and secret key for authorization
+[AWS CodeBuild Plugin] Zipping directory to upload to S3: /var/lib/jenkins/workspace/SampleCodeDeployApp
+[AWS CodeBuild Plugin] Uploading to S3 at location mypipeline-codedeploybucket-1gk5jtnozkdda/test. MD5 checksum is +vbY51szWzi3dUgXT6PXRg==
+[AWS CodeBuild Plugin] S3 object version id for uploaded source is mmbzgV3UwSBPF.3L_5Y2QTSLHNfWWDv6
+[AWS CodeBuild Plugin] Starting build with 
+	> project name: myCodeBuildProjecy
+	> source version: mmbzgV3UwSBPF.3L_5Y2QTSLHNfWWDv6
+	> Download build artifacts: false
+[AWS CodeBuild Plugin] Build id: myCodeBuildProjecy:ebbc145a-2c7e-4f52-883a-da48cdcb3f85
+[AWS CodeBuild Plugin] CodeBuild dashboard: https://eu-central-1.console.aws.amazon.com/codesuite/codebuild/projects/myCodeBuildProjecy/build/myCodeBuildProjecy:ebbc145a-2c7e-4f52-883a-da48cdcb3f85/log?region=eu-central-1
+[AWS CodeBuild Plugin] CloudWatch dashboard: https://console.aws.amazon.com/cloudwatch/home?region=eu-central-1#logEvent:group=/aws/codebuild/myCodeBuildProjecy;stream=ebbc145a-2c7e-4f52-883a-da48cdcb3f85
+[AWS CodeBuild Plugin] 2020/11/22 20:34:49 Waiting for agent ping
+[AWS CodeBuild Plugin] 2020/11/22 20:34:51 Waiting for DOWNLOAD_SOURCE
+[AWS CodeBuild Plugin] 2020/11/22 20:34:52 Phase is DOWNLOAD_SOURCE
+[AWS CodeBuild Plugin] 2020/11/22 20:34:52 CODEBUILD_SRC_DIR=/codebuild/output/src420552357/src
+[AWS CodeBuild Plugin] 2020/11/22 20:34:52 YAML location is /codebuild/output/src420552357/src/buildspec.yml
+[AWS CodeBuild Plugin] 2020/11/22 20:34:52 Processing environment variables
+[AWS CodeBuild Plugin] 2020/11/22 20:34:52 Moving to directory /codebuild/output/src420552357/src
+[AWS CodeBuild Plugin] 2020/11/22 20:34:52 Registering with agent
+[AWS CodeBuild Plugin] 2020/11/22 20:34:52 Phases found in YAML: 3
+[AWS CodeBuild Plugin] 2020/11/22 20:34:52  INSTALL: 1 commands
+[AWS CodeBuild Plugin] 2020/11/22 20:34:52  BUILD: 3 commands
+[AWS CodeBuild Plugin] 2020/11/22 20:34:52  POST_BUILD: 1 commands
+[AWS CodeBuild Plugin] 2020/11/22 20:34:52 Phase complete: DOWNLOAD_SOURCE State: SUCCEEDED
+[AWS CodeBuild Plugin] 2020/11/22 20:34:52 Phase context status code:  Message: 
+[AWS CodeBuild Plugin] 2020/11/22 20:34:52 Entering phase INSTALL
+[AWS CodeBuild Plugin] 2020/11/22 20:34:52 Running command python -m pip install Flask
+[AWS CodeBuild Plugin] Collecting Flask
+[AWS CodeBuild Plugin] /usr/local/lib/python2.7/dist-packages/pip/_vendor/urllib3/util/ssl_.py:339: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+[AWS CodeBuild Plugin]   SNIMissingWarning
+[AWS CodeBuild Plugin] /usr/local/lib/python2.7/dist-packages/pip/_vendor/urllib3/util/ssl_.py:137: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+[AWS CodeBuild Plugin]   InsecurePlatformWarning
+[AWS CodeBuild Plugin] /usr/local/lib/python2.7/dist-packages/pip/_vendor/urllib3/util/ssl_.py:137: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+[AWS CodeBuild Plugin]   InsecurePlatformWarning
+[AWS CodeBuild Plugin] /usr/local/lib/python2.7/dist-packages/pip/_vendor/urllib3/util/ssl_.py:137: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+[AWS CodeBuild Plugin]   InsecurePlatformWarning
+[AWS CodeBuild Plugin]   Downloading https://files.pythonhosted.org/packages/f2/28/2a03252dfb9ebf377f40fba6a7841b47083260bf8bd8e737b0c6952df83f/Flask-1.1.2-py2.py3-none-any.whl (94kB)
+[AWS CodeBuild Plugin] Collecting Werkzeug>=0.15 (from Flask)
+[AWS CodeBuild Plugin] /usr/local/lib/python2.7/dist-packages/pip/_vendor/urllib3/util/ssl_.py:137: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+[AWS CodeBuild Plugin]   InsecurePlatformWarning
+[AWS CodeBuild Plugin]   Downloading https://files.pythonhosted.org/packages/cc/94/5f7079a0e00bd6863ef8f1da638721e9da21e5bacee597595b318f71d62e/Werkzeug-1.0.1-py2.py3-none-any.whl (298kB)
+[AWS CodeBuild Plugin] Collecting itsdangerous>=0.24 (from Flask)
+[AWS CodeBuild Plugin] /usr/local/lib/python2.7/dist-packages/pip/_vendor/urllib3/util/ssl_.py:137: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+[AWS CodeBuild Plugin]   InsecurePlatformWarning
+[AWS CodeBuild Plugin]   Downloading https://files.pythonhosted.org/packages/76/ae/44b03b253d6fade317f32c24d100b3b35c2239807046a4c953c7b89fa49e/itsdangerous-1.1.0-py2.py3-none-any.whl
+[AWS CodeBuild Plugin] Collecting click>=5.1 (from Flask)
+[AWS CodeBuild Plugin] /usr/local/lib/python2.7/dist-packages/pip/_vendor/urllib3/util/ssl_.py:137: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+[AWS CodeBuild Plugin]   InsecurePlatformWarning
+[AWS CodeBuild Plugin]   Downloading https://files.pythonhosted.org/packages/d2/3d/fa76db83bf75c4f8d338c2fd15c8d33fdd7ad23a9b5e57eb6c5de26b430e/click-7.1.2-py2.py3-none-any.whl (82kB)
+[AWS CodeBuild Plugin] Collecting Jinja2>=2.10.1 (from Flask)
+[AWS CodeBuild Plugin] /usr/local/lib/python2.7/dist-packages/pip/_vendor/urllib3/util/ssl_.py:137: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+[AWS CodeBuild Plugin]   InsecurePlatformWarning
+[AWS CodeBuild Plugin]   Downloading https://files.pythonhosted.org/packages/30/9e/f663a2aa66a09d838042ae1a2c5659828bb9b41ea3a6efa20a20fd92b121/Jinja2-2.11.2-py2.py3-none-any.whl (125kB)
+[AWS CodeBuild Plugin] Collecting MarkupSafe>=0.23 (from Jinja2>=2.10.1->Flask)
+[AWS CodeBuild Plugin] /usr/local/lib/python2.7/dist-packages/pip/_vendor/urllib3/util/ssl_.py:137: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+[AWS CodeBuild Plugin]   InsecurePlatformWarning
+[AWS CodeBuild Plugin]   Downloading https://files.pythonhosted.org/packages/fb/40/f3adb7cf24a8012813c5edb20329eb22d5d8e2a0ecf73d21d6b85865da11/MarkupSafe-1.1.1-cp27-cp27mu-manylinux1_x86_64.whl
+[AWS CodeBuild Plugin] Installing collected packages: Werkzeug, itsdangerous, click, MarkupSafe, Jinja2, Flask
+[AWS CodeBuild Plugin] Successfully installed Flask-1.1.2 Jinja2-2.11.2 MarkupSafe-1.1.1 Werkzeug-1.0.1 click-7.1.2 itsdangerous-1.1.0
+[AWS CodeBuild Plugin] /usr/local/lib/python2.7/dist-packages/pip/_vendor/urllib3/util/ssl_.py:137: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+[AWS CodeBuild Plugin]   InsecurePlatformWarning
+[AWS CodeBuild Plugin] You are using pip version 9.0.3, however version 20.2.4 is available.
+[AWS CodeBuild Plugin] You should consider upgrading via the 'pip install --upgrade pip' command.
+[AWS CodeBuild Plugin] 
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Phase complete: INSTALL State: SUCCEEDED
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Phase context status code:  Message: 
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Entering phase PRE_BUILD
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Phase complete: PRE_BUILD State: SUCCEEDED
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Phase context status code:  Message: 
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Entering phase BUILD
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Running command echo Build started on `date`
+[AWS CodeBuild Plugin] Build started on Sun Nov 22 20:34:54 UTC 2020
+[AWS CodeBuild Plugin] 
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Running command echo Compiling the Python code...
+[AWS CodeBuild Plugin] Compiling the Python code...
+[AWS CodeBuild Plugin] 
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Running command python test_app.py
+[AWS CodeBuild Plugin] ..
+[AWS CodeBuild Plugin] ----------------------------------------------------------------------
+[AWS CodeBuild Plugin] Ran 2 tests in 0.010s
+[AWS CodeBuild Plugin] 
+[AWS CodeBuild Plugin] OK
+[AWS CodeBuild Plugin] 
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Phase complete: BUILD State: SUCCEEDED
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Phase context status code:  Message: 
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Entering phase POST_BUILD
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Running command echo Build completed on `date`
+[AWS CodeBuild Plugin] Build completed on Sun Nov 22 20:34:54 UTC 2020
+[AWS CodeBuild Plugin] 
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Phase complete: POST_BUILD State: SUCCEEDED
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Phase context status code:  Message: 
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Expanding base directory path: .
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Assembling file list
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Expanding .
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Expanding file paths for base directory .
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Assembling file list
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Expanding web.py
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Expanding appspec.yml
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Expanding templates/layout.html
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Expanding templates/test.html
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Expanding scripts/mkdir.sh
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Expanding scripts/start_flask.sh
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Expanding scripts/stop_flask1.sh
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Expanding scripts/stop_flask.py
+[AWS CodeBuild Plugin] 2020/11/22 20:34:54 Found 8 file(s)
+Build step 'AWS CodeBuild' changed build result to SUCCESS
+File Delete Operation:
+/var/lib/jenkins/workspace/SampleCodeDeployApp/README.md deleting....
+Success.
+/var/lib/jenkins/workspace/SampleCodeDeployApp/appspec.yml deleting....
+Success.
+/var/lib/jenkins/workspace/SampleCodeDeployApp/buildspec.yml deleting....
+Success.
+/var/lib/jenkins/workspace/SampleCodeDeployApp/requirements.txt deleting....
+Success.
+/var/lib/jenkins/workspace/SampleCodeDeployApp/test_app.py deleting....
+Success.
+/var/lib/jenkins/workspace/SampleCodeDeployApp/web.py deleting....
+Success.
+HttpMethod: GET
+URL: http://s3-eu-central-1.amazonaws.com/mypipeline-codedeploybucket-1gk5jtnozkdda/codebuild-artifact.zip
+Sending request to url: http://s3-eu-central-1.amazonaws.com/mypipeline-codedeploybucket-1gk5jtnozkdda/codebuild-artifact.zip
+Response Code: HTTP/1.1 200 OK
+Success code from [100‥399]
+Saving response body to /var/lib/jenkins/workspace/SampleCodeDeployApp/codebuild-artifact.zip
+Unzip File Operation:
+Unzipping codebuild-artifact.zip to /var/lib/jenkins/workspace/SampleCodeDeployApp
+Unzip completed.
+File Delete Operation:
+/var/lib/jenkins/workspace/SampleCodeDeployApp/codebuild-artifact.zip deleting....
+Success.
+Zipping files into /tmp/#4-7199821857299605146.zip
+Uploading zip to s3://mypipeline-codedeploybucket-1gk5jtnozkdda/#4-7199821857299605146.zip
+Registering revision for application 'myPipeline-DemoApplication-BDXFY48R91MH'
+Creating deployment with revision at {RevisionType: S3,S3Location: {Bucket: mypipeline-codedeploybucket-1gk5jtnozkdda,Key: #4-7199821857299605146.zip,BundleType: zip,ETag: 51b44233d5bb1d859d8948bd0d5b621c},}
+Monitoring deployment with ID d-2E75A0MM7...
+Deployment status: Created; instances: null
+Deployment status: Created; instances: null
+Deployment status: InProgress; instances: {Pending: 2,InProgress: 0,Succeeded: 0,Failed: 0,Skipped: 0,Ready: 0}
+Deployment status: Succeeded; instances: {Pending: 0,InProgress: 0,Succeeded: 2,Failed: 0,Skipped: 0,Ready: 0}
+Finished: SUCCESS
